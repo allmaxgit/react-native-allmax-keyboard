@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry, NativeModules, View } from 'react-native';
 import TextField from './lib/TextField';
 
-const { backSpace, insertText } = NativeModules.RNAllmaxKeyboard;
+const { backSpace, insertText, switchSystemKeyboard } = NativeModules.RNAllmaxKeyboard;
 
 const keyboardTypeRegistry = {};
 
@@ -30,4 +30,5 @@ export {
   TextField,
   backSpace,
   insertText,
+  switchSystemKeyboard,
 }
