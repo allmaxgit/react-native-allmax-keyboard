@@ -1,5 +1,4 @@
 #import "RNAllmaxKeyboard.h"
-#import "AppDelegate.h"
 #import <React/RCTUIManager.h>
 #import <React/RCTBridge.h>
 #import <React/RCTRootView.h>
