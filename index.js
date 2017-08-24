@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { AppRegistry, NativeModules, View } from 'react-native';
 import TextField from './lib/TextField';
 
-const { backSpace, insertText, switchSystemKeyboard } = NativeModules.RNAllmaxKeyboard;
+const { backSpace, insertText, switchSystemKeyboard, done } = NativeModules.RNAllmaxKeyboard;
 
 const keyboardTypeRegistry = {};
 
@@ -12,7 +12,7 @@ function registerKeyboard(keyboardType, keyboardProvider) {
 
 class CustomKeyboardContainer extends Component {
   render() {
-    const {tag, keyboardType} = this.props;
+    const { tag, keyboardType } = this.props;
     const factory = keyboardTypeRegistry[keyboardType];
     if (!factory) {
       console.warn(`Custom keyboard type ${keyboardType} not registered.`);
@@ -30,5 +30,6 @@ export {
   TextField,
   backSpace,
   insertText,
+  done,
   switchSystemKeyboard,
 }
